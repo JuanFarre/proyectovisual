@@ -1,54 +1,75 @@
 VERSION 5.00
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Consulta_Producto 
    Caption         =   "Producto"
-   ClientHeight    =   6855
+   ClientHeight    =   4815
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   9825
+   ClientWidth     =   8160
    LinkTopic       =   "Form1"
-   ScaleHeight     =   6855
-   ScaleWidth      =   9825
+   ScaleHeight     =   4815
+   ScaleWidth      =   8160
    StartUpPosition =   3  'Windows Default
-   Begin VB.ListBox lst2 
-      Height          =   255
-      ItemData        =   "Consulta_Producto.frx":0000
-      Left            =   5520
-      List            =   "Consulta_Producto.frx":0002
-      TabIndex        =   10
-      Top             =   1800
-      Width           =   615
+   Begin VB.CommandButton cmd4 
+      Caption         =   "SALIR"
+      Height          =   615
+      Index           =   1
+      Left            =   4200
+      TabIndex        =   12
+      Top             =   4080
+      Width           =   1335
    End
-   Begin VB.ListBox lst1 
-      Height          =   255
-      ItemData        =   "Consulta_Producto.frx":0004
+   Begin VB.CommandButton cmd3 
+      Caption         =   "NUEVO"
+      Height          =   495
+      Index           =   1
+      Left            =   1440
+      TabIndex        =   11
+      Top             =   4080
+      Width           =   1335
+   End
+   Begin MSFlexGridLib.MSFlexGrid MSFlexGrid1 
+      Height          =   1095
+      Left            =   600
+      TabIndex        =   10
+      Top             =   2400
+      Width           =   6855
+      _ExtentX        =   12091
+      _ExtentY        =   1931
+      _Version        =   393216
+      Rows            =   3
+      Cols            =   7
+   End
+   Begin VB.ComboBox cbo3 
+      Height          =   315
       Left            =   5520
-      List            =   "Consulta_Producto.frx":0006
       TabIndex        =   9
-      Top             =   720
-      Width           =   615
+      Text            =   "Selecc"
+      Top             =   1200
+      Width           =   975
+   End
+   Begin VB.ComboBox cbo2 
+      Height          =   315
+      Left            =   5520
+      TabIndex        =   8
+      Text            =   "Selecc"
+      Top             =   360
+      Width           =   975
+   End
+   Begin VB.ComboBox cbo1 
+      Height          =   315
+      Left            =   1200
+      TabIndex        =   7
+      Text            =   "cbo1"
+      Top             =   600
+      Width           =   855
    End
    Begin VB.TextBox txt1 
       Height          =   285
       Left            =   1200
-      TabIndex        =   8
-      Top             =   360
-      Width           =   975
-   End
-   Begin VB.CommandButton cmd4 
-      Caption         =   "Salir"
-      Height          =   255
-      Left            =   5040
-      TabIndex        =   7
-      Top             =   5280
-      Width           =   975
-   End
-   Begin VB.CommandButton cmd3 
-      Caption         =   "Nuevo"
-      Height          =   255
-      Left            =   2880
       TabIndex        =   6
-      Top             =   5280
-      Width           =   1095
+      Top             =   120
+      Width           =   975
    End
    Begin VB.CommandButton cmd2 
       Caption         =   "Buscar"
@@ -69,15 +90,15 @@ Begin VB.Form Consulta_Producto
    Begin VB.Label lbl4 
       Caption         =   "Tipo"
       Height          =   255
-      Left            =   3000
+      Left            =   4560
       TabIndex        =   3
-      Top             =   720
+      Top             =   1200
       Width           =   375
    End
    Begin VB.Label lbl3 
       Caption         =   "Habilitado"
       Height          =   255
-      Left            =   2400
+      Left            =   4320
       TabIndex        =   2
       Top             =   360
       Width           =   975
@@ -105,4 +126,15 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
+
+
+Private Sub Form_Load()
+
+    cbo2.AddItem "Si"
+    cbo2.AddItem "No"
+    
+    '----------------------------
+    cbo3.AddItem "Poceado"
+    cbo3.AddItem "Bancado"
+End Sub
 

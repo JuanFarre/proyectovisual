@@ -1,0 +1,21 @@
+
+1. Autenticación de Windows (Integrated Security):
+   cn.ConnectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=empresaV1;Data Source=[nombre del servidor]"
+
+2. Autenticación de SQL Server (Usuario y Contraseña):
+   cn.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=tuUsuario;Password=tuContraseña;Initial Catalog=empresaV1;Data Source=[nombre del servidor]"
+
+3. Usando el Proveedor OLE DB para SQL Server (SQLOLEDB):
+   cn.ConnectionString = "Provider=SQLOLEDB;Data Source=[nombre del servidor];Initial Catalog=empresaV1;User ID=tuUsuario;Password=tuContraseña;"
+
+4. Usando el Proveedor ODBC (MSDASQL) con DSN:
+   cn.ConnectionString = "DSN=miDSN;UID=tuUsuario;PWD=tuContraseña;"
+   
+   Sin DSN (conexión directa):
+   cn.ConnectionString = "Driver={SQL Server};Server=[nombre del servidor];Database=empresaV1;Uid=tuUsuario;Pwd=tuContraseña;"
+
+
+!! La Autenticación dependerá de la configuración establecida en el sql server, datos de credenciales y nombre del servidor los van obtener de las propiedades de conexión
+
+el scroll para visual lo pueden descargar del repo: https://github.com/hlizard/VBScroll/blob/master/release/from%20Gasanov.net/VBScroll.zip
+

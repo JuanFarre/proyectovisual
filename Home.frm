@@ -1,13 +1,12 @@
 VERSION 5.00
-Begin VB.Form Home 
-   Caption         =   "POC VB6 - Programación de Sorteos"
-   ClientHeight    =   3015
+Begin VB.MDIForm Home 
+   BackColor       =   &H8000000C&
+   Caption         =   "Home"
+   ClientHeight    =   4050
    ClientLeft      =   225
    ClientTop       =   870
-   ClientWidth     =   4560
-   LinkTopic       =   "Form1"
-   ScaleHeight     =   3015
-   ScaleWidth      =   4560
+   ClientWidth     =   6345
+   LinkTopic       =   "MDIForm1"
    StartUpPosition =   3  'Windows Default
    Begin VB.Menu mnuHome 
       Caption         =   "Home"
@@ -18,7 +17,7 @@ Begin VB.Form Home
    Begin VB.Menu mnuProgramacion 
       Caption         =   "Programacion"
       Begin VB.Menu mnuRepoProgMes 
-         Caption         =   "Repo.Prog.Mes"
+         Caption         =   "Repo. Prog. Mes"
       End
       Begin VB.Menu mnuExportProgMes 
          Caption         =   "Export.Prog.Mes"
@@ -42,7 +41,10 @@ Begin VB.Form Home
          Caption         =   "Usuarios"
       End
       Begin VB.Menu mnuAutoridad 
-         Caption         =   "Autoridadd"
+         Caption         =   "Autoridad"
+      End
+      Begin VB.Menu mnuLoteria 
+         Caption         =   "Loteria"
       End
    End
 End
@@ -52,4 +54,19 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
+
+Private Sub MDIForm_Load()
+    ' Aquí puedes inicializar cosas si es necesario
+    
+
+End Sub
+
+Private Sub mnuRepoProgMes_Click()
+    Repo_Prog_Mes.Show
+End Sub
+
+
+Private Sub mnuSalir_Click()
+    Unload Me ' Cierra el formulario principal
+End Sub
 

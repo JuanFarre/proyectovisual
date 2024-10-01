@@ -1,3 +1,7 @@
-Home = 182, 182, 962, 598, , 59, 43, 839, 459, C
-Consulta_Producto = 0, 0, 780, 416, , 208, 208, 988, 624, C
-Mantenedor_Producto = 52, 52, 832, 468, Z, 26, 26, 806, 442, C
+Consulta_Producto = 0, 0, 780, 416, C, 74, 60, 854, 476, C
+Mantenedor_Producto = 52, 52, 832, 468, C, 26, 26, 785, 442, C
+Export_Prog_Mes = 92, 119, 872, 535, C, 182, 182, 962, 598, C
+Repo_Prog_Mes = 130, 130, 910, 546, C, 104, 104, 884, 520, C
+Nueva_Modalidad = 182, 182, 962, 598, C, 156, 156, 936, 572, C
+Home = 104, 104, 884, 520, C, 78, 78, 858, 494, C
+clsConexion = 78, 78, 859, 494, C
