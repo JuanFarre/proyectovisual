@@ -7,9 +7,9 @@ Begin VB.Form Repo_Prog_Mes
    ClientTop       =   465
    ClientWidth     =   7200
    LinkTopic       =   "Form1"
+   MDIChild        =   -1  'True
    ScaleHeight     =   2940
    ScaleWidth      =   7200
-   StartUpPosition =   3  'Windows Default
    Begin MSFlexGridLib.MSFlexGrid MSFlexGrid1 
       Height          =   1215
       Left            =   480
@@ -57,3 +57,4 @@ Private Sub cmd1_Click()
 End
 
 End Sub
+

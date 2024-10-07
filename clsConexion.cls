@@ -13,7 +13,7 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Option Explicit
 
-Private cn As ADODB.connection
+Private cn As ADODB.Connection
 Public pNumError As Long
 Public pDesError As String
 Public pCanReg As Long
@@ -24,12 +24,12 @@ Public Sub Conectar()
     
     ' Verificar si la conexión ya existe
     If cn Is Nothing Then
-        Set cn = New ADODB.connection
+        Set cn = New ADODB.Connection
     End If
     
     ' Si la conexión está cerrada, abrirla
     If cn.State = adStateClosed Then
-        cn.connectionString = "Provider=SQLOLEDB.1; Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=loteriaVB;Data Source=DESKTOP-UK99V41"
+        cn.ConnectionString = "Provider=SQLOLEDB.1; Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=loteriaVB;Data Source=JOEL-SAUCEDO"
         cn.Open
         MsgBox "Conexión exitosa", vbInformation, "Éxito"
     End If

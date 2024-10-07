@@ -3,62 +3,62 @@ Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Mantenedor_Producto 
    Caption         =   "Mantenedor_Producto"
-   ClientHeight    =   5160
+   ClientHeight    =   7440
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   6960
+   ClientWidth     =   13755
    LinkTopic       =   "Form1"
-   ScaleHeight     =   5160
-   ScaleWidth      =   6960
+   ScaleHeight     =   7440
+   ScaleWidth      =   13755
    StartUpPosition =   3  'Windows Default
    Begin VB.ComboBox cbo1 
       Height          =   315
-      Left            =   1200
+      Left            =   4080
       TabIndex        =   47
       Text            =   "Selecc"
-      Top             =   960
+      Top             =   1440
       Width           =   1095
    End
    Begin VB.CheckBox chk2 
       Height          =   255
-      Left            =   4920
+      Left            =   11040
       TabIndex        =   9
-      Top             =   1080
+      Top             =   1800
       Width           =   255
    End
    Begin VB.CheckBox chk1 
       Height          =   255
-      Left            =   4920
+      Left            =   11040
       TabIndex        =   8
-      Top             =   240
+      Top             =   960
       Width           =   255
    End
    Begin VB.CommandButton cmd2 
       Caption         =   "Salir"
       Height          =   255
-      Left            =   3720
+      Left            =   5640
       TabIndex        =   7
-      Top             =   4680
+      Top             =   4320
       Width           =   1095
    End
    Begin VB.CommandButton cmd1 
       Caption         =   "Guardar"
       Height          =   255
-      Left            =   1800
+      Left            =   2520
       TabIndex        =   6
-      Top             =   4680
+      Top             =   4320
       Width           =   1095
    End
    Begin TabDlg.SSTab SSTab1 
-      Height          =   3135
-      Left            =   120
+      Height          =   3375
+      Left            =   1320
       TabIndex        =   5
-      Top             =   1440
-      Width           =   6375
-      _ExtentX        =   11245
-      _ExtentY        =   5530
+      Top             =   3600
+      Width           =   10335
+      _ExtentX        =   18230
+      _ExtentY        =   5953
       _Version        =   393216
-      Tab             =   2
+      Tab             =   1
       TabHeight       =   520
       TabCaption(0)   =   "Cuando Sortea?"
       TabPicture(0)   =   "Mantenedor_Producto.frx":0000
@@ -95,59 +95,60 @@ Begin VB.Form Mantenedor_Producto
       Tab(0).ControlCount=   29
       TabCaption(1)   =   "Jurisdicciones"
       TabPicture(1)   =   "Mantenedor_Producto.frx":001C
-      Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "cmd4"
+      Tab(1).ControlEnabled=   -1  'True
+      Tab(1).Control(0)=   "frm1"
+      Tab(1).Control(0).Enabled=   0   'False
       Tab(1).Control(1)=   "cmd3(0)"
-      Tab(1).Control(2)=   "frm1"
+      Tab(1).Control(1).Enabled=   0   'False
+      Tab(1).Control(2)=   "cmd4"
+      Tab(1).Control(2).Enabled=   0   'False
       Tab(1).ControlCount=   3
       TabCaption(2)   =   "Modalidades"
       TabPicture(2)   =   "Mantenedor_Producto.frx":0038
-      Tab(2).ControlEnabled=   -1  'True
-      Tab(2).Control(0)=   "MSFlexGrid1"
-      Tab(2).Control(0).Enabled=   0   'False
-      Tab(2).Control(1)=   "cmd5(1)"
-      Tab(2).Control(1).Enabled=   0   'False
+      Tab(2).ControlEnabled=   0   'False
+      Tab(2).Control(0)=   "cmd5(1)"
+      Tab(2).Control(1)=   "MSFlexGrid1"
       Tab(2).ControlCount=   2
       Begin VB.CommandButton cmd5 
          Caption         =   "NUEVA"
          Height          =   375
          Index           =   1
-         Left            =   5160
+         Left            =   -66120
          TabIndex        =   49
          Top             =   720
          Width           =   1095
       End
       Begin MSFlexGridLib.MSFlexGrid MSFlexGrid1 
-         Height          =   1935
-         Left            =   120
+         Height          =   2055
+         Left            =   -74880
          TabIndex        =   48
          Top             =   720
-         Width           =   4935
-         _ExtentX        =   8705
-         _ExtentY        =   3413
+         Width           =   8415
+         _ExtentX        =   14843
+         _ExtentY        =   3625
          _Version        =   393216
          Cols            =   5
       End
       Begin VB.CommandButton cmd4 
          Caption         =   "NINGUNA"
          Height          =   615
-         Left            =   -71520
+         Left            =   8400
          TabIndex        =   46
-         Top             =   1800
+         Top             =   1920
          Width           =   1095
       End
       Begin VB.CommandButton cmd3 
          Caption         =   "TODAS"
          Height          =   615
          Index           =   0
-         Left            =   -71520
+         Left            =   8400
          TabIndex        =   45
-         Top             =   840
+         Top             =   600
          Width           =   1095
       End
       Begin VB.Frame frm1 
          Height          =   2055
-         Left            =   -74640
+         Left            =   360
          TabIndex        =   40
          Top             =   600
          Width           =   2655
@@ -405,9 +406,9 @@ Begin VB.Form Mantenedor_Producto
    End
    Begin VB.TextBox txt1 
       Height          =   285
-      Left            =   960
+      Left            =   3840
       TabIndex        =   4
-      Top             =   240
+      Top             =   720
       Width           =   1095
    End
    Begin VB.Label Label1 
@@ -421,33 +422,33 @@ Begin VB.Form Mantenedor_Producto
    Begin VB.Label lbl4 
       Caption         =   "Es poceado?"
       Height          =   255
-      Left            =   3480
+      Left            =   9600
       TabIndex        =   3
-      Top             =   1080
+      Top             =   1800
       Width           =   1095
    End
    Begin VB.Label lbl3 
       Caption         =   "Habilitado"
       Height          =   255
-      Left            =   3480
+      Left            =   9600
       TabIndex        =   2
-      Top             =   240
+      Top             =   960
       Width           =   1095
    End
    Begin VB.Label lbl2 
       Caption         =   "Grupo"
       Height          =   255
-      Left            =   240
+      Left            =   3120
       TabIndex        =   1
-      Top             =   960
+      Top             =   1440
       Width           =   855
    End
    Begin VB.Label lbl1 
       Caption         =   "Nombre"
       Height          =   255
-      Left            =   240
+      Left            =   3120
       TabIndex        =   0
-      Top             =   360
+      Top             =   840
       Width           =   855
    End
 End

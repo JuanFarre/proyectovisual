@@ -2,10 +2,10 @@ VERSION 5.00
 Begin VB.MDIForm Home 
    BackColor       =   &H8000000C&
    Caption         =   "Home"
-   ClientHeight    =   4050
+   ClientHeight    =   6930
    ClientLeft      =   225
    ClientTop       =   870
-   ClientWidth     =   6345
+   ClientWidth     =   13755
    LinkTopic       =   "MDIForm1"
    StartUpPosition =   3  'Windows Default
    Begin VB.Menu mnuHome 
@@ -54,11 +54,21 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
+Private cnn As clsConexion
+
 
 Private Sub MDIForm_Load()
-    ' Aquí puedes inicializar cosas si es necesario
+    Set cnn = New clsConexion
     
+    cnn.Conectar
+End Sub
 
+Private Sub mnuExportProgMes_Click()
+    Export_Prog_Mes.Show
+End Sub
+
+Private Sub mnuProductos_Click()
+    Consulta_Producto.Show
 End Sub
 
 Private Sub mnuRepoProgMes_Click()
@@ -67,6 +77,6 @@ End Sub
 
 
 Private Sub mnuSalir_Click()
-    Unload Me ' Cierra el formulario principal
+    Unload Me
 End Sub
 
