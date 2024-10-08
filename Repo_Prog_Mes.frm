@@ -2,14 +2,14 @@ VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form Repo_Prog_Mes 
    Caption         =   "Repo_Prog_Mes"
-   ClientHeight    =   2940
+   ClientHeight    =   4200
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   7200
+   ClientWidth     =   9780
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   2940
-   ScaleWidth      =   7200
+   ScaleHeight     =   4200
+   ScaleWidth      =   9780
    Begin MSFlexGridLib.MSFlexGrid MSFlexGrid1 
       Height          =   1215
       Left            =   480

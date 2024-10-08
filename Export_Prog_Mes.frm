@@ -2,14 +2,14 @@ VERSION 5.00
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
 Begin VB.Form Export_Prog_Mes 
    Caption         =   "Export_Prog_Mes"
-   ClientHeight    =   3015
+   ClientHeight    =   3375
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   4560
+   ClientWidth     =   5220
    LinkTopic       =   "Form1"
-   ScaleHeight     =   3015
-   ScaleWidth      =   4560
-   StartUpPosition =   3  'Windows Default
+   MDIChild        =   -1  'True
+   ScaleHeight     =   3375
+   ScaleWidth      =   5220
    Begin MSComDlg.CommonDialog CommonDialog1 
       Left            =   3840
       Top             =   840
@@ -79,30 +79,122 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
 Option Explicit
 
-Private Sub cmd2_Click()
-End
+Dim con As New ADODB.Connection
+Dim rec As New ADODB.Recordset
+
+Private Sub Form_Load()
+    ' Inicializar la conexión a la base de datos
+    con.Open "Driver=Sql Server;database=loteriaVB;server=JOEL-SAUCEDO"
+    
+    ' Cargar los meses en el ComboBox (cbo1)
+    cargarMeses
 End Sub
-    
-Private Sub cmd3_Click()
-    Dim folderPath As String
-    Dim ShellObj As Object
- 
-    Set ShellObj = CreateObject("Shell.Application")
-    
-    With ShellObj.BrowseForFolder(0, "Seleccione la Carpeta Destino", 0, "C:\")
-        If Not .IsNothing Then
-           
-            folderPath = .Self.Path
-            txt1.Text = folderPath
-        Else
-        
-            MsgBox "Selección cancelada", vbInformation
-        End If
+
+Private Sub cargarMeses()
+    ' Añadir los meses al ComboBox
+    With cbo1
+        .AddItem "Enero"
+        .AddItem "Febrero"
+        .AddItem "Marzo"
+        .AddItem "Abril"
+        .AddItem "Mayo"
+        .AddItem "Junio"
+        .AddItem "Julio"
+        .AddItem "Agosto"
+        .AddItem "Septiembre"
+        .AddItem "Octubre"
+        .AddItem "Noviembre"
+        .AddItem "Diciembre"
     End With
+End Sub
+
+Private Sub cmd3_Click()
+    ' Abrir el cuadro de diálogo para seleccionar carpeta
+    CommonDialog1.Flags = cdlOFNHideReadOnly
+    CommonDialog1.ShowOpen
+
+    ' Establecer el directorio seleccionado en el TextBox (txt1)
+    txt1.Text = CommonDialog1.Filename
+End Sub
+
+Private Sub cmd1_Click()
+    Dim Mes As String
+    Dim carpetaDestino As String
+    Dim archivoSalida As String
+    Dim sql As String
+    Dim mesNumero As String
+    Dim nroSorteo As String
+    Dim codigoJuego As String
+    Dim fileNum As Integer
+
+    ' Obtener el mes seleccionado y la carpeta de destino
+    Mes = cbo1.Text
+    carpetaDestino = txt1.Text
+
+    ' Validar que se haya seleccionado un mes y una carpeta
+    If Mes = "" Or carpetaDestino = "" Then
+        MsgBox "Por favor, seleccione un mes y una carpeta de destino.", vbExclamation
+        Exit Sub
+    End If
+
+    ' Convertir el mes a su número correspondiente
+    mesNumero = Format(Month(DateValue("1 " & Mes)), "00") ' Obtiene el número del mes en formato 2 dígitos
+
+    ' Generar la consulta SQL para obtener los datos
+    sql = "SELECT j.idJuego, s.nroSorteo " & _
+          "FROM Sorteos s " & _
+          "INNER JOIN Juego j ON s.idJuego = j.idJuego " & _
+          "WHERE MONTH(s.fecha) = " & Month(DateValue("1 " & Mes)) & " " & _
+          "ORDER BY s.nroSorteo;"
+
+    ' Abrir el recordset con la consulta
+    rec.Open sql, con, adOpenStatic, adLockReadOnly
+
+    ' Verificar si hay datos
+    If rec.EOF Then
+        MsgBox "No hay datos para el mes elegido.", vbInformation
+        Exit Sub
+    End If
+
+    ' Crear el nombre del archivo CSV
+    Do While Not rec.EOF
+        codigoJuego = Format(rec!idJuego, "00") ' Asegurar que el idJuego tenga 2 dígitos
+        nroSorteo = Format(rec!nroSorteo, "000000") ' Asegurar que el nroSorteo tenga 6 dígitos
+        archivoSalida = carpetaDestino & "\PS" & codigoJuego & nroSorteo & ".csv"
+        
+        ' Crear o abrir el archivo para escribir
+        fileNum = FreeFile
+        Open archivoSalida For Output As #fileNum
+        
+        ' Escribir los encabezados en el archivo CSV (ajusta esto según tus necesidades)
+        Print #fileNum, "IdJuego,NroSorteo"
+        
+        ' Iterar sobre los registros y escribirlos en el archivo CSV
+        Do While Not rec.EOF
+            Print #fileNum, rec!idJuego & "," & rec!nroSorteo
+            rec.MoveNext
+        Loop
+        
+        Close #fileNum
+        
+        MsgBox "Se ha generado satisfactoriamente el archivo " & archivoSalida, vbInformation
+    Loop
     
-    Set ShellObj = Nothing
+    ' Cerrar el recordset
+    rec.Close
+End Sub
+
+Private Sub cmd2_Click()
+    ' Cerrar el formulario
+    Unload Me
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+    ' Verificar si la conexión está abierta y cerrarla
+    If con.State = adStateOpen Then
+        con.Close
+    End If
 End Sub
 

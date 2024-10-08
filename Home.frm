@@ -55,28 +55,35 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private cnn As clsConexion
+Private men As Escribir_log
 
 
 Private Sub MDIForm_Load()
     Set cnn = New clsConexion
+    Set men = New Escribir_log
     
     cnn.Conectar
+    men.EscribirLog ("Se Abrió Home")
 End Sub
 
 Private Sub mnuExportProgMes_Click()
+    men.EscribirLog ("Ingreso a Menú Principal - Exportar Programación Mensual")
     Export_Prog_Mes.Show
 End Sub
 
 Private Sub mnuProductos_Click()
+    men.EscribirLog ("Ingreso a Menú Principal - Consulta de Productos")
     Consulta_Producto.Show
 End Sub
 
 Private Sub mnuRepoProgMes_Click()
+    men.EscribirLog ("Ingreso a Menú Principal - Reporte Programación Mensual")
     Repo_Prog_Mes.Show
 End Sub
 
 
 Private Sub mnuSalir_Click()
+    men.EscribirLog ("Se Salió Home")
     Unload Me
 End Sub
 

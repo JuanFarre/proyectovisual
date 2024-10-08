@@ -1,0 +1,68 @@
+7/10/2024 17:13:11: Se Abrio Home
+7/10/2024 17:21:38: Se Abrió Home
+7/10/2024 17:21:59: Se Abrió Home
+7/10/2024 17:22:00: Ingreso a Menú Principal - Reporte Programación Mensual
+7/10/2024 17:22:04: Se Abrió Home
+7/10/2024 17:22:06: Ingreso a Menú Principal - Exportar Programación Mensual
+7/10/2024 17:22:12: Se Abrió Home
+7/10/2024 17:22:14: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 18:49:41: Se Abrió Home
+7/10/2024 18:49:45: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 18:50:46: Se Abrió Home
+7/10/2024 18:50:48: Ingreso a Menú Principal - Exportar Programación Mensual
+7/10/2024 18:51:06: Se Abrió Home
+7/10/2024 18:51:10: Ingreso a Menú Principal - Exportar Programación Mensual
+7/10/2024 18:51:15: Se Abrió Home
+7/10/2024 18:51:17: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 18:51:26: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:16:41: Se Abrió Home
+7/10/2024 19:16:42: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:20:38: Se Abrió Home
+7/10/2024 19:20:40: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:24:05: Se Abrió Home
+7/10/2024 19:24:07: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:27:15: Se Abrió Home
+7/10/2024 19:27:16: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:28:04: Se Abrió Home
+7/10/2024 19:28:06: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:28:56: Se Abrió Home
+7/10/2024 19:28:57: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:33:04: Se Abrió Home
+7/10/2024 19:33:06: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:33:36: Se Abrió Home
+7/10/2024 19:33:38: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:37:46: Se Abrió Home
+7/10/2024 19:37:48: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:40:11: Se Abrió Home
+7/10/2024 19:40:13: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 19:40:55: Se Abrió Home
+7/10/2024 19:40:57: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 20:00:10: Se Abrió Home
+7/10/2024 20:00:12: Ingreso a Menú Principal - Consulta de Productos
+7/10/2024 20:11:08: Se Abrió Home
+7/10/2024 20:11:11: Ingreso a Menú Principal - Exportar Programación Mensual
+8/10/2024 08:07:32: Se Abrió Home
+8/10/2024 08:07:38: Ingreso a Menú Principal - Exportar Programación Mensual
+8/10/2024 08:18:24: Se Abrió Home
+8/10/2024 08:18:27: Ingreso a Menú Principal - Exportar Programación Mensual
+8/10/2024 08:21:13: Se Abrió Home
+8/10/2024 08:21:16: Ingreso a Menú Principal - Exportar Programación Mensual
+8/10/2024 08:21:34: Se Abrió Home
+8/10/2024 08:21:38: Ingreso a Menú Principal - Exportar Programación Mensual
+8/10/2024 08:50:45: Se Abrió Home
+8/10/2024 08:50:48: Ingreso a Menú Principal - Reporte Programación Mensual
+8/10/2024 08:50:57: Se Abrió Home
+8/10/2024 08:51:02: Ingreso a Menú Principal - Consulta de Productos
+8/10/2024 08:55:17: Se Abrió Home
+8/10/2024 08:55:19: Ingreso a Menú Principal - Exportar Programación Mensual
+8/10/2024 08:55:26: Ingreso a Menú Principal - Reporte Programación Mensual
+8/10/2024 09:01:30: Se Abrió Home
+8/10/2024 09:01:33: Ingreso a Menú Principal - Reporte Programación Mensual
+8/10/2024 09:02:17: Se Abrió Home
+8/10/2024 09:02:20: Ingreso a Menú Principal - Reporte Programación Mensual
+8/10/2024 09:02:52: Se Abrió Home
+8/10/2024 09:02:54: Ingreso a Menú Principal - Reporte Programación Mensual
+8/10/2024 09:08:59: Se Abrió Home
+8/10/2024 09:09:01: Ingreso a Menú Principal - Reporte Programación Mensual
+8/10/2024 09:10:57: Se Abrió Home
+8/10/2024 09:10:59: Ingreso a Menú Principal - Consulta de Productos
