@@ -15,7 +15,6 @@ Begin VB.Form Nueva_Modalidad
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   11
-      Text            =   "Nueva_Modalidad.frx":0000
       Top             =   1200
       Width           =   1815
    End
@@ -39,7 +38,6 @@ Begin VB.Form Nueva_Modalidad
       Height          =   375
       Left            =   2280
       TabIndex        =   8
-      Text            =   "txt3"
       Top             =   2520
       Width           =   1455
    End
@@ -47,7 +45,6 @@ Begin VB.Form Nueva_Modalidad
       Height          =   285
       Left            =   2280
       TabIndex        =   7
-      Text            =   "txt2"
       Top             =   1920
       Width           =   1455
    End
@@ -55,7 +52,6 @@ Begin VB.Form Nueva_Modalidad
       Height          =   285
       Left            =   2040
       TabIndex        =   6
-      Text            =   "txt1"
       Top             =   840
       Width           =   1815
    End
@@ -63,7 +59,6 @@ Begin VB.Form Nueva_Modalidad
       Height          =   315
       Left            =   2160
       TabIndex        =   5
-      Text            =   "cbo1"
       Top             =   240
       Width           =   1575
    End

@@ -66,3 +66,5 @@
 8/10/2024 09:09:01: Ingreso a Menú Principal - Reporte Programación Mensual
 8/10/2024 09:10:57: Se Abrió Home
 8/10/2024 09:10:59: Ingreso a Menú Principal - Consulta de Productos
+8/10/2024 14:17:44: Se Abrió Home
+8/10/2024 14:17:47: Ingreso a Menú Principal - Consulta de Productos

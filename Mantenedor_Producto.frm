@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Begin VB.Form Mantenedor_Producto 
+   BackColor       =   &H80000010&
    Caption         =   "Mantenedor_Producto"
    ClientHeight    =   8160
    ClientLeft      =   120
@@ -13,14 +14,15 @@ Begin VB.Form Mantenedor_Producto
    StartUpPosition =   3  'Windows Default
    Begin TabDlg.SSTab SSTab1 
       Height          =   3975
-      Left            =   2040
+      Left            =   1920
       TabIndex        =   11
-      Top             =   2520
+      Top             =   2280
       Width           =   11415
       _ExtentX        =   20135
       _ExtentY        =   7011
       _Version        =   393216
       TabHeight       =   520
+      BackColor       =   -2147483644
       TabCaption(0)   =   "Cuándo Sortea?"
       TabPicture(0)   =   "Mantenedor_Producto.frx":0000
       Tab(0).ControlEnabled=   -1  'True
@@ -159,7 +161,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5880
          TabIndex        =   33
-         Text            =   "txt15"
          Top             =   2880
          Width           =   495
       End
@@ -167,7 +168,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5280
          TabIndex        =   32
-         Text            =   "txt14"
          Top             =   2880
          Width           =   495
       End
@@ -175,7 +175,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5880
          TabIndex        =   31
-         Text            =   "txt13"
          Top             =   2520
          Width           =   495
       End
@@ -183,7 +182,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5280
          TabIndex        =   30
-         Text            =   "txt12"
          Top             =   2520
          Width           =   495
       End
@@ -191,7 +189,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5880
          TabIndex        =   29
-         Text            =   "txt11"
          Top             =   2160
          Width           =   495
       End
@@ -199,7 +196,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5280
          TabIndex        =   28
-         Text            =   "txt10"
          Top             =   2160
          Width           =   495
       End
@@ -207,7 +203,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5880
          TabIndex        =   27
-         Text            =   "txt9"
          Top             =   1800
          Width           =   495
       End
@@ -215,7 +210,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5280
          TabIndex        =   26
-         Text            =   "txt8"
          Top             =   1800
          Width           =   495
       End
@@ -223,7 +217,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5880
          TabIndex        =   25
-         Text            =   "txt7"
          Top             =   1440
          Width           =   495
       End
@@ -231,7 +224,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5280
          TabIndex        =   24
-         Text            =   "txt6"
          Top             =   1440
          Width           =   495
       End
@@ -239,7 +231,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5880
          TabIndex        =   23
-         Text            =   "txt5"
          Top             =   1080
          Width           =   495
       End
@@ -247,7 +238,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5280
          TabIndex        =   22
-         Text            =   "txt4"
          Top             =   1080
          Width           =   495
       End
@@ -255,7 +245,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5880
          TabIndex        =   21
-         Text            =   "txt3"
          Top             =   720
          Width           =   495
       End
@@ -263,7 +252,6 @@ Begin VB.Form Mantenedor_Producto
          Height          =   375
          Left            =   5280
          TabIndex        =   20
-         Text            =   "txt2"
          Top             =   720
          Width           =   495
       End
@@ -336,89 +324,96 @@ Begin VB.Form Mantenedor_Producto
    End
    Begin VB.ComboBox cbo1 
       Height          =   315
-      Left            =   4080
+      Left            =   3960
       TabIndex        =   10
       Text            =   "Selecc"
       Top             =   1440
-      Width           =   1095
+      Width           =   1935
    End
    Begin VB.CheckBox chk2 
+      BackColor       =   &H80000010&
       Height          =   255
       Index           =   0
       Left            =   11040
       TabIndex        =   8
-      Top             =   1800
+      Top             =   1560
       Width           =   255
    End
    Begin VB.CheckBox chk1 
+      BackColor       =   &H80000010&
       Height          =   255
       Index           =   0
       Left            =   11040
       TabIndex        =   7
-      Top             =   960
+      Top             =   840
       Width           =   255
    End
    Begin VB.CommandButton cmd2 
       Caption         =   "Salir"
-      Height          =   255
-      Left            =   9840
+      Height          =   495
+      Left            =   9600
       TabIndex        =   6
-      Top             =   6720
-      Width           =   1095
+      Top             =   6600
+      Width           =   1455
    End
    Begin VB.CommandButton cmd1 
       Caption         =   "Guardar"
-      Height          =   255
+      Height          =   495
       Left            =   3840
       TabIndex        =   5
-      Top             =   6720
-      Width           =   1095
+      Top             =   6600
+      Width           =   1455
    End
    Begin VB.TextBox txt1 
       Height          =   285
       Left            =   3840
       TabIndex        =   4
       Top             =   720
-      Width           =   1095
+      Width           =   2055
    End
    Begin VB.Label Label1 
       Caption         =   ":"
-      Height          =   375
-      Left            =   3600
+      Height          =   255
+      Left            =   6960
       TabIndex        =   9
-      Top             =   2400
-      Width           =   255
+      Top             =   4080
+      Width           =   135
    End
    Begin VB.Label lbl4 
+      BackStyle       =   0  'Transparent
       Caption         =   "Es poceado?"
       Height          =   255
-      Left            =   9600
+      Left            =   9960
       TabIndex        =   3
-      Top             =   1800
+      Top             =   1560
       Width           =   1095
    End
    Begin VB.Label lbl3 
+      BackStyle       =   0  'Transparent
       Caption         =   "Habilitado"
       Height          =   255
-      Left            =   9600
+      Left            =   10200
       TabIndex        =   2
-      Top             =   960
-      Width           =   1095
-   End
-   Begin VB.Label lbl2 
-      Caption         =   "Grupo"
-      Height          =   255
-      Left            =   3120
-      TabIndex        =   1
-      Top             =   1440
+      Top             =   840
       Width           =   855
    End
+   Begin VB.Label lbl2 
+      BackColor       =   &H8000000D&
+      BackStyle       =   0  'Transparent
+      Caption         =   "Grupo"
+      Height          =   375
+      Left            =   3360
+      TabIndex        =   1
+      Top             =   1440
+      Width           =   615
+   End
    Begin VB.Label lbl1 
+      BackStyle       =   0  'Transparent
       Caption         =   "Nombre"
       Height          =   255
-      Left            =   3120
+      Left            =   3000
       TabIndex        =   0
-      Top             =   840
+      Top             =   720
       Width           =   855
    End
 End

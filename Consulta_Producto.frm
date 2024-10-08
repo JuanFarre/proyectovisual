@@ -12,7 +12,7 @@ Begin VB.Form Consulta_Producto
    ScaleWidth      =   11925
    Begin VB.CommandButton cmd4 
       Caption         =   "SALIR"
-      Height          =   615
+      Height          =   495
       Index           =   1
       Left            =   7800
       TabIndex        =   12
@@ -23,18 +23,18 @@ Begin VB.Form Consulta_Producto
       Caption         =   "NUEVO"
       Height          =   495
       Index           =   1
-      Left            =   1680
+      Left            =   2520
       TabIndex        =   11
       Top             =   5160
       Width           =   1335
    End
    Begin MSFlexGridLib.MSFlexGrid MSFlexGrid1 
       Height          =   2535
-      Left            =   840
+      Left            =   360
       TabIndex        =   10
       Top             =   2520
-      Width           =   9855
-      _ExtentX        =   17383
+      Width           =   11175
+      _ExtentX        =   19711
       _ExtentY        =   4471
       _Version        =   393216
       Rows            =   3
@@ -78,19 +78,19 @@ Begin VB.Form Consulta_Producto
    End
    Begin VB.CommandButton cmd2 
       Caption         =   "Buscar"
-      Height          =   255
+      Height          =   495
       Left            =   7800
       TabIndex        =   5
       Top             =   1920
-      Width           =   1095
+      Width           =   1335
    End
    Begin VB.CommandButton cmd1 
       Caption         =   "Limpiar"
-      Height          =   255
+      Height          =   495
       Left            =   2520
       TabIndex        =   4
       Top             =   1920
-      Width           =   855
+      Width           =   1215
    End
    Begin VB.Label lbl4 
       Caption         =   "Tipo"
@@ -345,17 +345,42 @@ Private Sub FGridDatos_Click()
         
         ' Determinar qué botón fue clicado basándose en la posición
         If InStr(contenido, "Editar") > 0 Then
-            ' Aquí puedes implementar la lógica para editar
-            MsgBox "Editar registro en fila " & fila
+            EditarJuego FGridDatos.TextMatrix(fila, 0)
         ElseIf InStr(contenido, "Eliminar") > 0 Then
-            ' Aquí puedes implementar la lógica para eliminar
-            MsgBox "Eliminar registro en fila " & fila
+            EliminarJuego FGridDatos.TextMatrix(fila, 0) ' Pasar el IdJuego
         ElseIf InStr(contenido, "Programar") > 0 Then
             ' Aquí puedes implementar la lógica para programar
             MsgBox "Programar registro en fila " & fila
         End If
     End If
 End Sub
+
+Private Sub EditarJuego(idJuego As Integer)
+    ' Asumiendo que tienes un formulario llamado Mantenedor_Producto para editar
+    Mantenedor_Producto.Show
+    ' Puedes pasar el id del juego al formulario si es necesario
+    Mantenedor_Producto.CargarDatos (idJuego)
+End Sub
+
+Private Sub EliminarJuego(idJuego As Integer)
+    Dim respuesta As VbMsgBoxResult
+    respuesta = MsgBox("¿Estás seguro de que deseas eliminar este juego?", vbYesNo + vbQuestion, "Eliminar Juego")
+
+    If respuesta = vbYes Then
+        Dim sql As String
+        sql = "DELETE FROM Juego WHERE idJuego = " & idJuego
+
+        ' Ejecutar la consulta de eliminación
+        con.Execute sql
+        
+        ' Mensaje de confirmación
+        MsgBox "Juego eliminado correctamente.", vbInformation
+        
+        ' Volver a cargar los datos en la grilla
+        Call cargaDatos("")
+    End If
+End Sub
+
 
 
 

@@ -143,11 +143,11 @@ Private Sub cmd1_Click()
     mesNumero = Format(Month(DateValue("1 " & Mes)), "00") ' Obtiene el número del mes en formato 2 dígitos
 
     ' Generar la consulta SQL para obtener los datos
-    sql = "SELECT j.idJuego, s.nroSorteo " & _
-          "FROM Sorteos s " & _
-          "INNER JOIN Juego j ON s.idJuego = j.idJuego " & _
-          "WHERE MONTH(s.fecha) = " & Month(DateValue("1 " & Mes)) & " " & _
-          "ORDER BY s.nroSorteo;"
+    sql = "SELECT j.idJuego, ps.nroSorteo " & _
+          "FROM PgmSorteos ps " & _
+          "INNER JOIN Juego j ON ps.idJuego = j.idJuego " & _
+          "WHERE MONTH(ps.fecha) = " & Month(DateValue("1 " & Mes)) & " " & _
+          "ORDER BY ps.nroSorteo;"
 
     ' Abrir el recordset con la consulta
     rec.Open sql, con, adOpenStatic, adLockReadOnly
@@ -197,4 +197,5 @@ Private Sub Form_Unload(Cancel As Integer)
         con.Close
     End If
 End Sub
+
 

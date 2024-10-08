@@ -1,9 +1,9 @@
-Consulta_Producto = 90, 31, 963, 585, , 34, 34, 992, 555, C
-Mantenedor_Producto = 52, 52, 832, 468, , 5, 4, 998, 609, C
-Export_Prog_Mes = 100, 12, 880, 428, Z, 117, 45, 897, 461, C
-Repo_Prog_Mes = 130, 130, 910, 546, , 104, 104, 884, 520, C
+Consulta_Producto = 90, 31, 963, 585, C, 34, 34, 992, 555, C
+Mantenedor_Producto = 52, 52, 832, 468, C, 0, 4, 1009, 616, C
+Export_Prog_Mes = 100, 12, 880, 428, C, 117, 45, 897, 461, C
+Repo_Prog_Mes = 130, 130, 910, 546, C, 104, 104, 884, 520, C
 Nueva_Modalidad = 120, 30, 900, 446, C, 156, 156, 936, 572, C
-Home = 69, 94, 849, 510, , 3, 1, 986, 599, C
-clsConexion = 107, 51, 888, 467, 
-Module1 = 26, 26, 853, 460, 
-Escribir_log = 78, 78, 905, 512, 
+Home = 69, 94, 849, 510, C, 3, 1, 986, 599, C
+clsConexion = 107, 51, 888, 467, C
+Module1 = 26, 26, 853, 460, C
+Escribir_log = 78, 78, 905, 512, C

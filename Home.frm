@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.MDIForm Home 
-   BackColor       =   &H8000000C&
+   BackColor       =   &H80000012&
    Caption         =   "Home"
    ClientHeight    =   6930
    ClientLeft      =   225
